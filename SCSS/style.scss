@@ -1,14 +1,14 @@
 // Format
+
 body {
   background-color: #000;
 }
 
 .main-grid {
   display: grid;
-  grid-template-rows: auto 4fr 4fr 4fr 3fr 1fr;
+  grid-template-rows: auto 4fr auto auto 3fr 1fr;
   grid-template-areas: "nav" "mission" "tea" "locations" "contact" "footer";
 }
-
 // Home Page
 nav {
   grid-area: nav;
@@ -29,35 +29,147 @@ nav {
   background-repeat: no-repeat;
   background-size: cover;
 
-  .inner-container {
+  .mission-container {
     margin-top: 400px;
     width: 100%;
     padding: 2rem;
     background-color: rgba(0,0,0,0.8);
+
+    h2,
+    h4 {
+      color: #fff;
+      text-align: center;
+    }
   }
 }
 
 #tea {
   grid-area: tea;
-  background-color: orange;
+
+  .tea-header {
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+    color: #fff;
+    display: flex;
+    flex-flow: column wrap;
+    align-self: center;
+
+    h2,
+    h4 {
+      text-align: center;
+    }
+  }
+
+  .tea-body {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .tea-container {
+    margin: 3rem;
+    display: flex;
+    flex-flow: column wrap;
+    text-align: center;
+
+    img {
+      height: auto;
+      width: 300px;
+    }
+
+    h4 {
+      color: #fff;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
 }
 
 #locations {
   grid-area: locations;
-  background-color: green;
+  background-image: url("../img/location-background.jpg");
+  height: 900px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  .dark-overlay {
+    position: absolute;
+    width: 100%;
+    height: 900px;
+    background: rgba(0,0,0,0.5);
+  }
+
+  .locations-header {
+    margin-top: 250px;
+    margin-bottom: 3rem;
+    color: #fff;
+    display: flex;
+    flex-flow: column wrap;
+    align-self: center;
+
+    h2 {
+      text-align: center;
+    }
+  }
+
+  .locations-body {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    margin-bottom: 2rem;
+
+    :hover {
+      background: #000;
+      border-radius: 20px;
+    }
+  }
+
+  .location-container {
+    padding: 3rem;
+    margin-right: 2rem;
+    margin-left: 2rem;
+    display: flex;
+    flex-flow: column wrap;
+    text-align: center;
+    background: rgba(0,0,0,0.7);
+    border-radius: 20px;
+
+    h5,
+    p {
+      color: #fff;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
 }
 
 #contact {
   grid-area: contact;
-  background-color: yellow;
 }
 
 footer {
   grid-area: footer;
   background-color: red;
 }
-
 // Media Queries
+@media screen and (max-width: 982px) {
+  #locations .locations-header {
+    margin-top: 1rem;
+    margin-bottom: 0;
+  }
+
+  #locations .location-container {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+}
 @media screen and (min-width: 768px) {
   .topBottomOut .nav-link:after,
   .topBottomOut .nav-link:before {
