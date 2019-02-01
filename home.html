@@ -21,7 +21,7 @@
     <!-- Nav  -->
     <nav class="navbar navbar-expand-md navbar-dark fixed-top">
 
-      <img class="navbar-brand d-lg-none" src="./img/img-tea-cozy-logo.png" alt="Tea Cozy Logo">
+      <a href="index.html"><img class="navbar-brand d-lg-none" src="./img/img-tea-cozy-logo.png" alt="Tea Cozy Logo"></a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
         <i class="fas fa-chevron-circle-down"></i> Menu
       </button>
@@ -32,7 +32,7 @@
             <a class="nav-link" href="#mission">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Featured Tea</a>
+            <a class="nav-link" href="tea.html">Featured Tea</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#locations">Locations</a>
@@ -42,20 +42,20 @@
           </li>
         </ul>
 
-        <img class="navbar-brand d-none d-lg-block ml-auto mr-4" src="./img/img-tea-cozy-logo.png" alt="Tea Cozy Logo">
+        <a href="index.html" class="logo-link"><img class="navbar-brand d-none d-lg-block ml-auto mr-4" src="./img/img-tea-cozy-logo.png" alt="Tea Cozy Logo"></a>
         <div class="d-flex justify-content-between">
           <div class="d-none d-md-block mx-2">
-            <a href="http://www.facebook.com" class="link-icon text-secondary">
+            <a href="http://www.facebook.com" class="link-icon text-secondary" target="_blank">
               <i class="fab fa-facebook-f"></i>
             </a>
           </div>
           <div class="d-none d-md-block mx-2">
-            <a href="http://www.instagram.com" class="link-icon text-secondary">
+            <a href="http://www.instagram.com" class="link-icon text-secondary" target="_blank">
               <i class="fab fa-instagram"></i>
             </a>
           </div>
           <div class="d-none d-md-block mx-2">
-            <a href="http://www.pinterest.com" class="link-icon text-secondary">
+            <a href="http://www.pinterest.com" class="link-icon text-secondary" target="_blank">
               <i class="fab fa-pinterest"></i>
             </a>
           </div>
@@ -78,29 +78,58 @@
         <h2>Tea of the Month</h2>
         <h4>What's Steeping at The Tea Cozy?</h4>
       </div>
+
       <div class="tea-body">
         <div class="tea-container">
-          <img src="./img/img-berryblitz.jpg" alt="Fall Berry Blitz Tea" class="img-fluid">
+          <div class="tea-box">
+            <img src="./img/img-berryblitz.jpg" alt="Fall Berry Blitz Tea" class="img-fluid">
+            <div class="tea-overlay">
+              <a href="tea.html" class="tea-overlay-text">Learn More</a>
+            </div>
+          </div>
           <h4>Fall Berry Blitz Tea</h4>
         </div>
+
         <div class="tea-container">
-          <img src="./img/img-bedford-bizarre.jpg" alt="Bedford Bizarre Tea" class="img-fluid">
+          <div class="tea-box">
+            <img src="./img/img-bedford-bizarre.jpg" alt="Bedford Bizarre Tea" class="img-fluid">
+            <div class="tea-overlay">
+              <a href="tea.html" class="tea-overlay-text">Learn More</a>
+            </div>
+          </div>
           <h4>Bedford Bizarre Tea</h4>
         </div>
+
         <div class="tea-container">
-          <img src="./img/img-donut.jpg" alt="Seasonal Donut Tea" class="img-fluid">
-          <h4>Seasonal Donut Tea</h4>
-        </div>
-        <div class="tea-container">
-          <img src="./img/img-myrtle-ave.jpg" alt="Myrtle Ave Tea" class="img-fluid">
+          <div class="tea-box">
+            <img src="./img/img-myrtle-ave.jpg" alt="Myrtle Ave Tea" class="img-fluid">
+            <div class="tea-overlay">
+              <a href="tea.html" class="tea-overlay-text">Learn More</a>
+            </div>
+          </div>
           <h4>Myrtle Ave Tea</h4>
         </div>
+
         <div class="tea-container">
-          <img src="./img/img-spiced-rum.jpg" alt="Spiced Rum Tea" class="img-fluid">
+          <div class="tea-box">
+            <img src="./img/img-spiced-rum.jpg" alt="Spiced Rum Tea" class="img-fluid">
+            <div class="tea-overlay">
+              <a href="tea.html" class="tea-overlay-text">Learn More</a>
+            </div>
+          </div>
           <h4>Spiced Rum Tea</h4>
         </div>
-      </div>
 
+        <div class="tea-container">
+          <div class="tea-box">
+            <img src="./img/img-donut.jpg" alt="Seasonal Donuts" class="img-fluid">
+            <div class="tea-overlay">
+              <a href="tea.html" class="tea-overlay-text">Learn More</a>
+            </div>
+          </div>
+          <h4>Seasonal Donuts</h4>
+        </div>
+      </div>
     </section>
 
     <!-- Locations  -->
@@ -124,19 +153,94 @@
           </div>
           <div class="location-container">
             <h5><i class="fas fa-map-marked-alt"></i> Oakdale</h5>
-            <p>515 Crescent Avenue</p>
+            <p>515 Crescent Avenue South</p>
             <p>Second Floor</p>
             <p>Portland, Maine</p>
           </div>
-
         </div>
+      </div>
     </section>
 
     <!-- Contact  -->
-    <section id="contact"></section>
+    <section id="contact">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="card p-3">
+              <div class="card-body">
+                <h4 class="text-center">Get In Touch</h4>
+                <p class="text-center">We look forward to talking with you!</p>
+
+                <h4><i class="fas fa-envelope-open"></i> Email</h4>
+                <p>contact@teacozy.com</p>
+                <h4><i class="fas fa-phone"></i> Phone</h4>
+                <p>(555) 234-6955</p>
+
+                <div class="contact-icons">
+                  <a href="http://www.facebook.com" class="link-icon" target="_blank">
+                    <i class="fab fa-facebook fa-2x  mt-5 mx-3"></i>
+                  </a>
+                  <a href="http://www.instagram.com" class="link-icon" target="_blank">
+                    <i class="fab fa-instagram fa-2x  mt-5 mx-3"></i>
+                  </a>
+                  <a href="http://www.pinterest.com" class="link-icon" target="_blank">
+                    <i class="fab fa-pinterest fa-2x  mt-5 mx-3"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <div class="col-md-8">
+            <div class="card p-4">
+              <div class="card-body">
+                <h3 class="text-center">Please fill out this form to contact us</h3>
+                <hr>
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="form-group">
+                      <input type="text" class="form-control" placeholder="Name">
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <input type="email" class="form-control" placeholder="Email">
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <input type="text" class="form-control" placeholder="Phone Number">
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="form-group">
+                      <textarea class="form-control" placeholder="Message" rows="3"></textarea>
+                    </div>
+                  </div>
+                  <div class="col-md-12">
+                    <div class="form-group">
+                      <input type="submit" value="Submit" class="btn btn-outline-dark btn-block">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- Footer  -->
-    <footer id="footer"></footer>
+    <footer id="footer">
+      <div class="copyright">
+        <p>Copyright &copy; <span id="year"></span> Tea Cozy</p>
+      </div>
+      <div class="branding">
+        <p>JTCurry Development</p>
+      </div>
+    </footer>
   </div>
 
   <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>

@@ -3,7 +3,7 @@ body {
 
 .main-grid {
   display: grid;
-  grid-template-rows: auto 4fr auto auto 3fr 1fr;
+  grid-template-rows: auto 4fr auto auto 3fr auto;
   grid-template-areas: "nav" "mission" "tea" "locations" "contact" "footer"; }
 
 nav {
@@ -12,6 +12,8 @@ nav {
   nav a {
     color: #fff;
     position: relative; }
+  nav a.logo-link {
+    margin-left: auto; }
 
 #mission {
   grid-area: mission;
@@ -55,9 +57,35 @@ nav {
     display: flex;
     flex-flow: column wrap;
     text-align: center; }
+    #tea .tea-container .tea-box {
+      position: relative;
+      width: 100%; }
     #tea .tea-container img {
+      display: block;
       height: auto;
-      width: 300px; }
+      width: 300px;
+      opacity: 1;
+      transition: 0.5s ease;
+      backface-visibility: hidden; }
+    #tea .tea-container .tea-overlay {
+      transition: 0.5s ease;
+      opacity: 0;
+      position: absolute;
+      transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      text-align: center;
+      top: 50%;
+      left: 50%; }
+    #tea .tea-container :hover .img-fluid {
+      opacity: 0.3; }
+    #tea .tea-container :hover .tea-overlay {
+      opacity: 1; }
+    #tea .tea-container .tea-overlay-text {
+      background-color: #343a40;
+      color: white;
+      font-size: 16px;
+      padding: 8px 28px;
+      border-radius: 15px; }
     #tea .tea-container h4 {
       color: #fff;
       margin-left: auto;
@@ -66,7 +94,7 @@ nav {
 #locations {
   grid-area: locations;
   background-image: url("../img/location-background.jpg");
-  height: 900px;
+  height: 1000px;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -74,10 +102,10 @@ nav {
   #locations .dark-overlay {
     position: absolute;
     width: 100%;
-    height: 900px;
+    height: 1000px;
     background: rgba(0, 0, 0, 0.5); }
   #locations .locations-header {
-    margin-top: 250px;
+    margin-top: 300px;
     margin-bottom: 3rem;
     color: #fff;
     display: flex;
@@ -111,16 +139,36 @@ nav {
       margin-right: auto; }
 
 #contact {
-  grid-area: contact; }
+  grid-area: contact;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  display: flex;
+  align-items: center; }
+  #contact .card {
+    height: 100%; }
+  #contact .contact-icons {
+    display: flex;
+    justify-content: space-between; }
+    #contact .contact-icons a {
+      color: #343a40; }
 
 footer {
   grid-area: footer;
-  background-color: red; }
+  display: inline-flex;
+  justify-content: space-between; }
+  footer .branding,
+  footer .copyright {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    color: #6c757d; }
 
 @media screen and (max-width: 982px) {
   #locations .locations-header {
     margin-top: 1rem;
     margin-bottom: 0; }
+
+  #tea .tea-header {
+    margin-top: 1rem; }
 
   #locations .location-container {
     margin-top: 1rem;
