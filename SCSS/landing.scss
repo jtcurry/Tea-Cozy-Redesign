@@ -14,9 +14,7 @@ body {
   background-size: cover;
   background-position: center;
 }
-
 // Landing Page
-
 nav {
   grid-area: nav;
 
@@ -46,6 +44,12 @@ nav {
 
 #main {
   grid-area: main;
+  display: flex;
+  justify-content: center;
+
+  .experience-container {
+    margin-top: 3rem;
+  }
 }
 
 #footer {
@@ -62,9 +66,7 @@ nav {
     color: #6c757d;
   }
 }
-
 // Media Queries
-
 @media screen and (min-width: 768px) {
   .topBottomOut .nav-link:after,
   .topBottomOut .nav-link:before {

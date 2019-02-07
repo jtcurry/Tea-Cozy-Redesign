@@ -31,7 +31,11 @@ nav {
       text-align: center; }
 
 #main {
-  grid-area: main; }
+  grid-area: main;
+  display: flex;
+  justify-content: center; }
+  #main .experience-container {
+    margin-top: 3rem; }
 
 #footer {
   grid-area: footer;
